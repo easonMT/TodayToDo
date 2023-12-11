@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task List</title>
+</head>
+<body>
+    <h1>Task List</h1>
+    <ul th:each="task : ${tasks}">
+        <li th:text="${task.name + ' - ' + task.description + ' - ' + task.status}"></li>
+    </ul>
+    <a th:href="@{/add}"><button>Add New Task</button></a>
+    <a th:href="@{/delete}"><button>Delete Task</button></a>
+    <a th:href="@{/update}"><button>Update Task</button></a>
+</body>
+</html>

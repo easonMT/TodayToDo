@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delete Task</title>
+</head>
+<body>
+    <h1>Delete Task</h1>
+
+    <form action="/delete" method="post" th:object="${tasksForm}">
+        <ul th:each="task : ${tasks}">
+            <li>
+                <input type="checkbox" th:id="${'task_' + task.id}" th:name="selectedTasks" th:value="${task.id}">
+                <label th:for="${'task_' + task.id}" th:text="${task.name + ' - ' + task.description + ' - ' + task.status}"></label>
+            </li>
+        </ul>
+        <button type="submit">Delete Selected Tasks</button>
+    </form>
+    <a th:href="@{/tasks}">Back to Task List</a>
+</body>
+</html>

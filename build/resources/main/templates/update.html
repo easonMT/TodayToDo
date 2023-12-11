@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Update Task</title>
+</head>
+<body>
+    <h1>Update Task</h1>
+    <form action="/update" th:method="post" th:object="${selectedTask}">
+        <input type="hidden" name="_method" value="put">
+        <select th:field="*{id}">
+            <option th:each="task : ${tasks}" th:value="${task.id}" th:text="${task.name + ' - ' + task.description + ' - ' + task.status}"></option>
+        </select>
+        <br>
+        <input type="hidden" th:field="*{id}">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" th:field="*{name}" required>
+        <br>
+        <label for="description">Description:</label>
+        <input type="text" id="description" name="description" th:field="*{description}" required>
+        <br>
+        <label for="status">Status:</label>
+        <input type="text" id="status" name="status" th:field="*{status}" required>
+        <br>
+        <button type="submit">Update Selected Task</button>
+    </form>
+    <a th:href="@{/tasks}">Back to Task List</a>
+</body>
+</html>
