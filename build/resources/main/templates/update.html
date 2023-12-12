@@ -11,15 +11,15 @@
     <form action="/update" th:method="post" th:object="${selectedTask}">
         <input type="hidden" name="_method" value="put">
         <select th:field="*{id}">
-            <option th:each="task : ${tasks}" th:value="${task.id}" th:text="${task.name + ' - ' + task.description + ' - ' + task.status}"></option>
+            <option th:each="task : ${tasks}" th:value="${task.id}" th:text="${task.name + ' - ' + task.time + ' - ' + task.status}"></option>
         </select>
         <br>
         <input type="hidden" th:field="*{id}">
         <label for="name">Name:</label>
         <input type="text" id="name" name="name" th:field="*{name}" required>
         <br>
-        <label for="description">Description:</label>
-        <input type="text" id="description" name="description" th:field="*{description}" required>
+        <label for="description">Time:</label>
+        <input type="text" id="time" name="time" th:field="*{time}" required>
         <br>
         <label for="status">Status:</label>
         <input type="text" id="status" name="status" th:field="*{status}" required>

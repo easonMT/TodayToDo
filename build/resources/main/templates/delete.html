@@ -13,7 +13,7 @@
         <ul th:each="task : ${tasks}">
             <li>
                 <input type="checkbox" th:id="${'task_' + task.id}" th:name="selectedTasks" th:value="${task.id}">
-                <label th:for="${'task_' + task.id}" th:text="${task.name + ' - ' + task.description + ' - ' + task.status}"></label>
+                <label th:for="${'task_' + task.id}" th:text="${task.name + ' - ' + task.time + ' - ' + task.status}"></label>
             </li>
         </ul>
         <button type="submit">Delete Selected Tasks</button>

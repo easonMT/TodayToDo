@@ -64,7 +64,7 @@ public class TaskController {
             .orElseThrow(() -> new RuntimeException("Task with id: " + taskId + " not found"));
 
         updateTask.setName(selectedTask.getName());
-        updateTask.setDescription(selectedTask.getDescription());
+        updateTask.setTime(selectedTask.getTime());
         updateTask.setStatus(selectedTask.getStatus());  
 
         taskRepository.save(updateTask);

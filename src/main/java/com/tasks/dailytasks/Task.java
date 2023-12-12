@@ -14,17 +14,17 @@ public class Task {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String name;
-    private String description;
+    private String time;
     private String status;
 
     public Task() {
 
     }
 
-    public Task(Long id, String name, String description, String status) {
+    public Task(Long id, String name, String time, String status) {
         this.id = id;
         this.name = name;
-        this.description = description;
+        this.time = time;
         this.status = status;
     }
 
@@ -44,12 +44,12 @@ public class Task {
         this.name = name;
     }
 
-    public String getDescription() {
-        return description;
+    public String getTime() {
+        return time;
     }
 
-    public void setDescription(String description) {
-        this.description = description;
+    public void setTime(String time) {
+        this.time = time;
     }
 
     public String getStatus() {

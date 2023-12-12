@@ -9,7 +9,7 @@
 <body>
     <h1>Task List</h1>
     <ul th:each="task : ${tasks}">
-        <li th:text="${task.name + ' - ' + task.description + ' - ' + task.status}"></li>
+        <li th:text="${task.name + ' - ' + task.time + ' - ' + task.status}"></li>
     </ul>
     <a th:href="@{/add}"><button>Add Task</button></a>
     <a th:href="@{/delete}"><button>Delete Task</button></a>
