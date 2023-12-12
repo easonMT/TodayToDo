@@ -28,9 +28,17 @@ h3 {
 }
 
 button {
-    background-color: white;
-    color: black;
+    background-color: orangered;
+    border-radius: 25px;
+    border: none;
+    color: white;
+    padding: 15px 32px;
     font-size: 16px;
-    border-radius: 25%;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+
+button:active {
+    transform: translateY(4px);
 }
 
