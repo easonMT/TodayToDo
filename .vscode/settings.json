@@ -1,3 +1,4 @@
 {
-  "cSpell.words": ["Dailytasks"]
+  "cSpell.words": ["Dailytasks"],
+  "java.compile.nullAnalysis.mode": "automatic"
 }

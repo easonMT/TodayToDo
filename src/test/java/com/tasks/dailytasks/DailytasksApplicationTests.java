@@ -59,6 +59,16 @@ class DailytasksApplicationTests {
 	void testUpdateSelectedTask() throws Exception {
 	}
 
+	@Test
+	void testDeleteTaskForm() throws Exception {
+
+	}
+
+	@Test
+	void testDeleteSelectedTasks() throws Exception {
+
+	}
+
 	
 
 }
